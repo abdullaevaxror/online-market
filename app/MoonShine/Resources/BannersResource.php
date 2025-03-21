@@ -15,6 +15,7 @@ use MoonShine\UI\Fields\ID;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\UI\Fields\Image;
+use MoonShine\UI\Fields\Select;
 use MoonShine\UI\Fields\Text;
 use App\MoonShine\Resources\CategoryResource;
 
@@ -37,6 +38,13 @@ class BannersResource extends ModelResource
             Text::make('title'),
             Text::make('description'),
             File::make('image'),
+            Select::make('position')
+                ->options([
+                    'top'=>'top',
+                    'middle'=>'middle',
+                    'ads'=>'ads',
+                    'bottom'=>'bottom'
+                ]),
             BelongsTo::make(
                 'Category',
                 'category',
@@ -57,6 +65,13 @@ class BannersResource extends ModelResource
                 Text::make('title'),
                 Text::make('description'),
                 File::make('image'),
+                Select::make('position')
+                    ->options([
+                        'top'=>'top',
+                        'middle'=>'middle',
+                        'ads'=>'ads',
+                        'bottom'=>'bottom'
+                    ]),
                 BelongsTo::make(
                     'Category',
                     'category',
@@ -77,6 +92,13 @@ class BannersResource extends ModelResource
             Text::make('title'),
             Text::make('description'),
             Image::make('image'),
+            Select::make('position')
+                ->options([
+                    'top'=>'top',
+                    'middle'=>'middle',
+                    'ads'=>'ads',
+                    'bottom'=>'bottom'
+                ]),
             BelongsTo::make(
                 'Category',
                 'category',
